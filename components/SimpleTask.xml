@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+
+<component name="SimpleTask" extends="Task">
+
+<interface>
+    <field id="index" type="int" value="0"/>
+</interface>
+
+<script type="text/brightscript" >
+<![CDATA[
+
+sub init()
+	m.top.functionName = "executeTask"
+end sub
+
+function executeTask() as void
+		m.top.index = m.top.index + 1
+		print "Firing request"
+		request = CreateObject("roUrlTransfer")
+        request.SetUrl("http://maker.ifttt.com/trigger/smart_plug_pressed/with/key/{Your IFTTT Auth Key}")
+        html = request.GetToString()
+        print html
+end function
+function onKeyEvent(key as String, press as Boolean) as Boolean
+	print key
+end function
+]]>
+</script>
+
+</component>
