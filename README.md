@@ -34,4 +34,4 @@ Note: Updating the package instantly fires the command we set up in IFTTT earlie
 
 ## Demo
 
-[![Be9Concepts YouTube](https://youtu.be/wZIR4QWT4eM)](https://youtu.be/wZIR4QWT4eM)
+[![Be9Concepts YouTube](https://github.com/be9concepts/Roku-mydlink-Home-Smart-Plug/blob/master/hqdefault.jpg?raw=true)](https://youtu.be/wZIR4QWT4eM)
