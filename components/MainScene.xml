@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--********** Copyright 2016 Roku Corp.  All Rights Reserved. **********-->
+
+<component name="MainScene" extends="Scene"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd"
+	initialFocus="buttonGroup">
+	<!-- importing main handler -->
+	<script type="text/brightscript"
+		uri="pkg:/components/MainScene.brs" /><children>
+	<ButtonGroup id="buttonGroup"
+		buttons='[ "Turn On Plug", "Turn Off Plug", "Toggle Plug On/Off (30 Seconds)", "Settings"]'
+		buttonHeight="100" layoutDirection="vert" horizAlignment="left"
+		translation="[600,300.0]">
+	</ButtonGroup></children>
+</component>

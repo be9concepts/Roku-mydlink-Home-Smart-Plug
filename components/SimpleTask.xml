@@ -4,6 +4,7 @@
 
 <interface>
     <field id="index" type="int" value="0"/>
+    <field id="button" type="int" value="0"/>
 </interface>
 
 <script type="text/brightscript" >
@@ -14,15 +15,20 @@ sub init()
 end sub
 
 function executeTask() as void
-		m.top.index = m.top.index + 1
-		print "Firing request"
+		print m.top.button
+		if (m.top.button < 3)
+		buttonStrings = ["smart_plug_on", "smart_plug_off", "smart_plug_toggle"]
+		IFTTT_KEY = "dc1DypXeiKODXb7XG3-56t"
+		urlString = Substitute("http://maker.ifttt.com/trigger/{0}/with/key/{1}", buttonStrings[m.top.button], IFTTT_KEY)
+		print urlString
 		request = CreateObject("roUrlTransfer")
-        request.SetUrl("http://maker.ifttt.com/trigger/smart_plug_pressed/with/key/{Your IFTTT Auth Key}")
+        request.SetUrl(urlString)
         html = request.GetToString()
         print html
-end function
-function onKeyEvent(key as String, press as Boolean) as Boolean
-	print key
+        m.top.index = m.top.index + 1
+        else 
+        print "open settings"
+        end if
 end function
 ]]>
 </script>
