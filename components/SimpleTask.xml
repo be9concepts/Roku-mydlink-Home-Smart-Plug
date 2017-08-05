@@ -18,7 +18,7 @@ function executeTask() as void
 		print m.top.button
 		if (m.top.button < 3)
 		buttonStrings = ["smart_plug_on", "smart_plug_off", "smart_plug_toggle"]
-		IFTTT_KEY = "dc1DypXeiKODXb7XG3-56t"
+		IFTTT_KEY = "YOUR_API_KEY_HERE"
 		urlString = Substitute("http://maker.ifttt.com/trigger/{0}/with/key/{1}", buttonStrings[m.top.button], IFTTT_KEY)
 		print urlString
 		request = CreateObject("roUrlTransfer")
